@@ -1,24 +1,30 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Header(props) {
   const { brand } = props;
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-danger mb-3 py-0">
       <div className="container">
-        <a href="/" className="navbar-brand">
+        <Link to="/" className="navbar-brand">
           {brand}
-        </a>
+        </Link>
         <div>
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
-              <a href="/" className="nav-link">
+              <Link to="/" className="nav-link">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="/about" className="nav-link">
+              <Link to="/contacts/add" className="nav-link">
+                <i className="fas fa-plus" /> Add
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/about" className="nav-link">
                 About
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
